@@ -1,31 +1,24 @@
-import { Appointment } from "./Appointment";
-import { ConsoleHandling } from "./ConsoleHandling";
-import { v4 as uuidv4 } from "uuid";
 export class RegisteredImpfling {
-    public _eMail: String;
-    private _appointment: Appointment;
-    private _firstName: String;
-    private _lastName: String;
-    private _birthday: Date;
-    private _phoneNumber: string;
-    private _street: String;
-    private _houseNumber: Number;
-    private _postCode: Number;
-    private _city: String;
-    private _uuid: String;
+    public _firstName: string;
+    public _lastName: string;
+    public _birthday: string;
+    public _phonenumber: string;
+    public _street: string;
+    public _housenumber: string;
+    public _postCode: string;
+    public _city: string;
+    public _eMail: string;
 
-    constructor(_appointment: Appointment, _firstName: String, _lastName: String, _birthday: Date, _phoneNumber: string, _street: String, _houseNumber: Number, _postCode: Number, _city: String, _eMail: String) {
-        this._appointment = _appointment;
+    constructor(_firstName: string, _lastName: string, _birthday: string, _phonenumber: string, _street: string, _housenumber: string, _postCode: string, _city: string, _eMail: string) {
         this._firstName = _firstName;
         this._lastName = _lastName;
         this._birthday = _birthday;
-        this._phoneNumber = _phoneNumber;
+        this._phonenumber = _phonenumber;
         this._street = _street;
-        this._houseNumber = _houseNumber;
+        this._housenumber = _housenumber;
         this._postCode = _postCode;
         this._city = _city;
         this._eMail = _eMail;
-        this._uuid = uuidv4();
     }
 
 }

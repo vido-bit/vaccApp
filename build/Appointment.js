@@ -2,11 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Appointment = void 0;
 class Appointment {
-    _vaccinationID;
-    _isAvailable;
-    constructor(_vaccinationID, _isavailable) {
-        this._vaccinationID = _vaccinationID;
-        this._isAvailable = _isavailable;
+    vaccinationID;
+    isAvailable;
+    registeredImpfling;
+    constructor(_vaccinationID, _isavailable, _registeredImpfling) {
+        this.vaccinationID = _vaccinationID;
+        this.isAvailable = _isavailable;
+        this.registeredImpfling = _registeredImpfling;
     }
 }
 exports.Appointment = Appointment;

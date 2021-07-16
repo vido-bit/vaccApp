@@ -2,19 +2,19 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppointmentDay = void 0;
 class AppointmentDay {
-    _date;
-    _startTime;
-    _endTime;
-    _parallelVaccinations;
-    _timeIntervalInMinutes;
-    _parallelAppointmentInterval;
+    date;
+    startTime;
+    endTime;
+    parallelVaccinations;
+    timeIntervalInMinutes;
+    parallelAppointmentInterval;
     constructor(_date, _startTime, _endTime, _parallelVaccinations, _timeIntervalInMinutes, _parallelAppointments) {
-        this._date = _date;
-        this._startTime = _startTime;
-        this._endTime = _endTime;
-        this._parallelVaccinations = _parallelVaccinations;
-        this._parallelAppointmentInterval = _parallelAppointments;
-        this._timeIntervalInMinutes = _timeIntervalInMinutes;
+        this.date = _date;
+        this.startTime = _startTime;
+        this.endTime = _endTime;
+        this.parallelVaccinations = _parallelVaccinations;
+        this.parallelAppointmentInterval = _parallelAppointments;
+        this.timeIntervalInMinutes = _timeIntervalInMinutes;
     }
 }
 exports.AppointmentDay = AppointmentDay;

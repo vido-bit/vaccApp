@@ -1,1 +1,583 @@
-{"_date":"12.07.2021","_startTime":"17:00","_endTime":"17:30","_parallelVaccinations":3,"_timeIntervalInMinutes":3,"_parallelAppointmentInterval":[]}
+[
+          {
+                    "date": "30.07.2021",
+                    "startTime": "15:00",
+                    "endTime": "18:00",
+                    "parallelVaccinations": 3,
+                    "timeIntervalInMinutes": 5,
+                    "parallelAppointmentInterval": [
+                              {
+                                        "appointmentNumbersString": "1-3",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "4-6",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "7-9",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "10-12",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "13-15",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "16-18",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "19-21",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "22-24",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "25-27",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "28-30",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              },
+                              {
+                                        "appointmentNumbersString": "31-33",
+                                        "startTime": "15:00",
+                                        "endTime": "18:00",
+                                        "parallelAppointments": [
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  },
+                                                  {
+                                                            "vaccinationID": 34,
+                                                            "isAvailable": true,
+                                                            "registeredImpfling": {
+                                                                      "_firstName": "Viktor",
+                                                                      "_lastName": "Lukanow",
+                                                                      "_birthday": "12-05-1996",
+                                                                      "_phonenumber": "07624",
+                                                                      "_street": "Emtown",
+                                                                      "_housenumber": "5",
+                                                                      "_postCode": "78120",
+                                                                      "_city": "Furtwangen",
+                                                                      "_eMail": "viktor.lukanow@hs-furtwangen.de"
+                                                            }
+                                                  }
+                                        ]
+                              }
+                    ]
+          }
+]

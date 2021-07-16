@@ -9,6 +9,7 @@
     ]
   },
   "scripts": {
+    "test": "jest",
     "VaccApp": "nodemon build/Main.js"
   },
   "keywords": [],
@@ -16,7 +17,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/prompts": "^2.0.14",
-    "nodemon": "^2.0.9"
+    "nodemon": "^2.0.9",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3"
   },
   "dependencies": {
     "@types/lodash": "^4.14.168",

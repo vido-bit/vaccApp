@@ -25,7 +25,7 @@ export class FileHandling {
     // }
 
     public writeFile(pathToFile: string, dataToWrite: any): void {
-        writeFileSync(resolve(__dirname, "../" + pathToFile), JSON.stringify(dataToWrite));
+        writeFileSync(resolve(__dirname, "../" + pathToFile), JSON.stringify(dataToWrite, null, 20));
     }
 
     private readFile(pathToFile: string): any {

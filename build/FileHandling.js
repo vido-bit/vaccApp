@@ -21,7 +21,7 @@ class FileHandling {
     //     return this.readFile(pathToFile);
     // }
     writeFile(pathToFile, dataToWrite) {
-        fs_2.writeFileSync(path_1.resolve(__dirname, "../" + pathToFile), JSON.stringify(dataToWrite));
+        fs_2.writeFileSync(path_1.resolve(__dirname, "../" + pathToFile), JSON.stringify(dataToWrite, null, 20));
     }
     readFile(pathToFile) {
         let jsonRaw = fs_1.readFileSync(path_1.resolve(__dirname, "../" + pathToFile));
