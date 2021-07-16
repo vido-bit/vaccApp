@@ -1,0 +1,1 @@
+{"version":3,"file":"Appointment.js","sourceRoot":"","sources":["../src/Appointment.ts"],"names":[],"mappings":";;;AACA,MAAa,WAAW;IACZ,cAAc,CAAS;IACvB,YAAY,CAAU;IAE9B,YAAY,cAAsB,EAAE,YAAqB;QACrD,IAAI,CAAC,cAAc,GAAG,cAAc,CAAC;QACrC,IAAI,CAAC,YAAY,GAAG,YAAY,CAAC;IACrC,CAAC;CACJ;AARD,kCAQC"}

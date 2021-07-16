@@ -1,0 +1,14 @@
+[
+    {
+        "firstName": "",
+        "lastName": "",
+        "birthday": "",
+        "phoneNumber": "",
+        "street":"",
+        "houseNumber": "",
+        "postCode": "",
+        "city": "",
+        "eMail": "",
+        "uuid": ""
+    }
+]
