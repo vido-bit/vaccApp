@@ -1,5 +1,4 @@
 import { AppointmentInterval } from "./AppointmentInterval";
-import { Appointment } from "./Appointment";
 export class AppointmentDay {
     public date: string;
     public startTime: string;
@@ -7,7 +6,6 @@ export class AppointmentDay {
     public parallelVaccinations: Number;
     public timeIntervalInMinutes: Number;
     public parallelAppointmentInterval: AppointmentInterval[];
-
 
     constructor(_date: string, _startTime: string, _endTime: string, _parallelVaccinations: Number, _timeIntervalInMinutes: Number, _parallelAppointments: AppointmentInterval[]) {
         this.date = _date;

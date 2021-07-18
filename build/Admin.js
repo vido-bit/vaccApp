@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Admin = void 0;
+const ConsoleHandling_1 = require("./ConsoleHandling");
+const FileHandling_1 = require("./FileHandling");
 const AppointmentFactory_1 = require("./AppointmentFactory");
+const VaccApp_1 = require("./VaccApp");
 class Admin {
     static _instance = new Admin();
-    _username;
-    _password;
     constructor() {
         if (Admin._instance)
             throw new Error("Use Admin.getInstance() instead new Admin()");
@@ -14,39 +15,199 @@ class Admin {
     static getInstance() {
         return Admin._instance;
     }
-    login() {
-        let appointmentFactory = new AppointmentFactory_1.AppointmentFactory();
-        appointmentFactory.createAppointment();
+    async login() {
+        let username = await ConsoleHandling_1.default.question("Username: ");
+        if (username == "admin") {
+            let password = await ConsoleHandling_1.default.question("password: ");
+            if (password == "1234") {
+                ConsoleHandling_1.default.printInput("\nHello admin! Nice to see you :)");
+                this.showMethods();
+            }
+            else {
+                ConsoleHandling_1.default.printInput("\nincorrect Password. Please try again");
+                this.login();
+            }
+        }
+        else {
+            ConsoleHandling_1.default.printInput("\nincorrect Username. Please try again");
+            this.login();
+        }
     }
-    passwordEntry(_username, _password) {
+    async showMethods() {
+        let answer;
+        answer = await ConsoleHandling_1.default.showPossibilities(["(1) Create appointments", "(2) Overview for a day", "(3) Statistics"], "Please type the number of the function you want to use.");
+        while (answer != "1" && answer != "2" && answer != "3") {
+            ConsoleHandling_1.default.printInput("\nThis is not a valif input! Please try again.");
+            answer = await ConsoleHandling_1.default.showPossibilities(["(1) Create appointments", "(2) Overview for a day", "(3) Statistics"], "Please type the number of the function you want to use.");
+        }
+        switch (answer) {
+            case "1":
+                AppointmentFactory_1.AppointmentFactory.getInstance().createAppointments();
+                break;
+            case "2":
+                this.showDayOverview();
+                break;
+            case "3":
+                ConsoleHandling_1.default.closeConsole();
+        }
     }
-    // private async createAppointments(): Promise<void> {
-    // let appointmentArray: Array<AppointmentDay> = FileHandling.readArrayFile("../data/appointments.json");
-    // let appointmentDay: string = await ConsoleHandling.getInstance().question("Please type in the day you want to create appointments for (use format dd-mm-yyyy):");
-    // let startTime: string = await ConsoleHandling.getInstance().question("Please type in the time you want the appointments to start (use format 00:00):");
-    // let endTime: string = await ConsoleHandling.getInstance().question("Please type in the time you want the appointments to end (use format 00:00):");
-    // let parallelVaccination: string = await ConsoleHandling.getInstance().question("Please type in the Number of Vaccinations you want to be carried out parallel:");
-    // let timeIntervalInMinutes: string = await ConsoleHandling.getInstance().question("Please type in the time in Minutes one vaccination needs to be carried out:");
-    // let endHours: string = endTime.substring(0, 1);
-    // let endMinutes: string = endTime.substring(3, 4);
-    // let startHours: string = startTime.substring(0, 1);
-    // let startMinutes: string = startTime.substring(3, 4);
-    // let hourDifference: number = parseInt(endHours) - parseInt(startHours);
-    // let minutesDifference: number = parseInt(endHours) - parseInt(startHours);
-    // let hoursInMinutes: number = hourDifference * 60;
-    // let timeForAppointmentsInMinutes: number = hoursInMinutes + minutesDifference;
-    // let appointmentsForThisDay: Number = Math.floor(parseInt(timeIntervalInMinutes) / timeForAppointmentsInMinutes);
-    // let newParallelVaccinations: ParallelVaccinations[];
-    // for (let i: number = 0; i < appointmentsForThisDay; i++) {
-    //     newParallelVaccinations = new ParallelVaccinations(startTime, endTime, i);
-    // }
-    // let newAppointmentDay: AppointmentDay = new AppointmentDay(appointmentDay, startTime, endTime, parseInt(parallelVaccination), parseInt(timeIntervalInMinutes), newParallelVaccinations);
-    // }
     async showDayOverview() {
-        //     let date: string = await ConsoleHandling.getInstance().question("Please type in the day you want to an overview for (use format dd-mm-yyyy):");
-        // let overview: dayOverview = new dayOverview(date);
+        let amountOfAvailableAppointments = 0;
+        let amountOfOccupiedAppointments = 0;
+        let amountOfAppointments = 0;
+        let occupancyInPercent = 0;
+        let availabilityInPercent = 0;
+        let appointmentIsAvailable = false;
+        let appointmentsArray = FileHandling_1.default.readArrayFile("/data/appointments.json");
+        appointmentsArray.forEach(day => {
+            day.parallelAppointmentInterval.forEach(interval => {
+                interval.parallelAppointments.forEach(appointment => {
+                    amountOfAppointments++;
+                    if (appointment.isAvailable == true)
+                        amountOfAvailableAppointments++;
+                    else
+                        (amountOfOccupiedAppointments++);
+                });
+            });
+        });
+        availabilityInPercent = (amountOfAvailableAppointments / amountOfAppointments) * 100;
+        occupancyInPercent = (amountOfOccupiedAppointments / amountOfAppointments) * 100;
+        ConsoleHandling_1.default.printInput("\nAppointments available: " + availabilityInPercent.toString().substring(0, 4) + "%");
+        ConsoleHandling_1.default.printInput("Appointments occupied: " + occupancyInPercent.toString().substring(0, 4) + "%");
+        appointmentsArray.forEach(day => {
+            ConsoleHandling_1.default.printInput("\n" + day.date + "\n");
+            day.parallelAppointmentInterval.forEach(interval => {
+                amountOfAvailableAppointments = 0;
+                interval.parallelAppointments.forEach(appointment => {
+                    if (appointment.isAvailable == true) {
+                        amountOfAvailableAppointments++;
+                        appointmentIsAvailable = true;
+                    }
+                });
+                if (appointmentIsAvailable)
+                    ConsoleHandling_1.default.printInput(interval.startTime + "(" + amountOfAvailableAppointments.toString() + ")");
+                else
+                    ConsoleHandling_1.default.printInput(day.date + " (100% belegt)");
+            });
+        });
+        this.goNext();
     }
     async showStatistics() {
+        let appointmentsArray = await FileHandling_1.default.readArrayFile("/data/appointments.json");
+        let dayOfToday = new Date().toJSON().substring(8, 10);
+        console.log(dayOfToday);
+        let monthOfToday = new Date().toJSON().substring(5, 7);
+        console.log(monthOfToday);
+        let yearOfToday = parseInt(new Date().toJSON());
+        ConsoleHandling_1.default.printInput(yearOfToday.toString());
+        let totalAppointments = 0;
+        let totalAvailableAppointments = 0;
+        let totalOccupiedAppointments = 0;
+        let pastAppointments = 0;
+        let pastAvailableAppointments = 0;
+        let pastOccupiedAppointments = 0;
+        let futureAppointments = 0;
+        let futureAvailableAppointments = 0;
+        let futureOccupiedAppointments = 0;
+        appointmentsArray.forEach(day => {
+            let thisDay = parseInt(day.date.substring(0, 3));
+            let thisMonth = parseInt(day.date.substring(4, 6));
+            let thisYear = parseInt(day.date.substring(6, 10));
+            console.log(thisDay);
+            console.log(thisMonth);
+            console.log(thisYear);
+            day.parallelAppointmentInterval.forEach(interval => {
+                interval.parallelAppointments.forEach(appointment => {
+                    totalAppointments++;
+                    if (appointment.isAvailable == true) {
+                        totalAvailableAppointments++;
+                        if (thisYear < yearOfToday) {
+                            pastAvailableAppointments++;
+                            pastAppointments++;
+                        }
+                        if (thisYear == yearOfToday && thisMonth <= parseInt(monthOfToday))
+                            if (thisMonth == parseInt(monthOfToday) && thisDay <= parseInt(dayOfToday)) {
+                                pastAvailableAppointments++;
+                                pastAppointments++;
+                            }
+                        if (thisMonth < parseInt(monthOfToday)) {
+                            pastAvailableAppointments++;
+                            pastAppointments++;
+                        }
+                        if (thisYear > yearOfToday) {
+                            futureAvailableAppointments++;
+                            futureAppointments++;
+                        }
+                        if (thisYear == yearOfToday && thisMonth >= parseInt(monthOfToday))
+                            if (thisMonth == parseInt(monthOfToday) && thisDay > parseInt(dayOfToday)) {
+                                futureAvailableAppointments++;
+                                futureAppointments++;
+                            }
+                        if (thisMonth > parseInt(monthOfToday)) {
+                            futureAvailableAppointments++;
+                            futureAppointments++;
+                        }
+                    }
+                    else {
+                        totalOccupiedAppointments++;
+                        if (thisYear < yearOfToday) {
+                            pastOccupiedAppointments++;
+                            pastAppointments++;
+                        }
+                        if (thisYear == yearOfToday && thisMonth <= parseInt(monthOfToday))
+                            if (thisMonth == parseInt(monthOfToday) && thisDay <= parseInt(dayOfToday)) {
+                                pastOccupiedAppointments++;
+                                pastAppointments++;
+                            }
+                        if (thisMonth < parseInt(monthOfToday)) {
+                            pastOccupiedAppointments++;
+                            pastAppointments++;
+                        }
+                        if (thisYear > yearOfToday) {
+                            futureOccupiedAppointments++;
+                            futureAppointments++;
+                        }
+                        if (thisYear == yearOfToday && thisMonth >= parseInt(monthOfToday))
+                            if (thisMonth == parseInt(monthOfToday) && thisDay > parseInt(dayOfToday)) {
+                                futureOccupiedAppointments++;
+                                futureAppointments++;
+                            }
+                        if (thisMonth > parseInt(monthOfToday)) {
+                            futureOccupiedAppointments++;
+                            futureAppointments++;
+                        }
+                    }
+                });
+            });
+        });
+        ConsoleHandling_1.default.printInput("Total Appointments: " + totalAppointments.toString());
+        ConsoleHandling_1.default.printInput("  - in the future: " + futureAppointments);
+        ConsoleHandling_1.default.printInput("  - in the past: " + pastAppointments);
+        ConsoleHandling_1.default.printInput("Available Appointments: " + totalAvailableAppointments.toString());
+        ConsoleHandling_1.default.printInput("  - in the future: " + futureAvailableAppointments.toString());
+        ConsoleHandling_1.default.printInput("  - in the past: " + pastAvailableAppointments.toString());
+        ConsoleHandling_1.default.printInput("Occupied Appointments: " + totalOccupiedAppointments.toString());
+        ConsoleHandling_1.default.printInput("  - in the future: " + futureOccupiedAppointments.toString());
+        ConsoleHandling_1.default.printInput("  - in the past: " + pastOccupiedAppointments.toString());
+        this.goNext();
+    }
+    async goNext() {
+        let goNext;
+        goNext = await ConsoleHandling_1.default.showPossibilities(["(1) back to admin menu", "(2) logout", "(3) close console"], "Please type in the number of the function you want to use: ");
+        while (goNext != "1" && goNext != "2" && goNext != "3") {
+            ConsoleHandling_1.default.printInput("\nThis is not a valid input! Please try again.");
+            goNext = await ConsoleHandling_1.default.showPossibilities(["(1) back to admin menu", "(2) logout", "(3) close console"], "Please type in the number of the function you want to use: ");
+        }
+        switch (goNext) {
+            case "1":
+                this.showMethods();
+                break;
+            case "2":
+                VaccApp_1.default.chooseRole();
+                break;
+            case "3":
+                ConsoleHandling_1.default.closeConsole();
+        }
     }
 }
 exports.Admin = Admin;

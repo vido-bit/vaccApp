@@ -1,14 +1,24 @@
 [
-    {
-        "firstName": "",
-        "lastName": "",
-        "birthday": "",
-        "phoneNumber": "",
-        "street":"",
-        "houseNumber": "",
-        "postCode": "",
-        "city": "",
-        "eMail": "",
-        "uuid": ""
-    }
+          {
+                    "firstName": "Tadej",
+                    "lastName": "Pogacar",
+                    "birthday": "13.05.1995",
+                    "phonenumber": "270345612",
+                    "street": "Champs Elysee",
+                    "housenumber": "17",
+                    "postCode": "78620",
+                    "city": "Paris",
+                    "eMail": "tadejpogacar@uae.com"
+          },
+          {
+                    "firstName": "Vadoo",
+                    "lastName": "Vao",
+                    "birthday": "13.06.1997",
+                    "phonenumber": "109240920305",
+                    "street": "Jeditempel",
+                    "housenumber": "1",
+                    "postCode": "0456189",
+                    "city": "Coruscant",
+                    "eMail": "vadoo@vao.de"
+          }
 ]

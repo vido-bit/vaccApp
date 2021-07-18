@@ -26,8 +26,6 @@ export class ConsoleHandling {
 
     public showPossibilities(showPossibilities: String[], question: String): Promise<String> {
         this.line.write("\n");
-        this.line.write("Functions you can use: ");
-        this.line.write("\n\n");
         for (let possibility of showPossibilities) {
             this.line.write(possibility.toString());
             this.line.write("\n");

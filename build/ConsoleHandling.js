@@ -25,8 +25,6 @@ class ConsoleHandling {
     }
     showPossibilities(showPossibilities, question) {
         this.line.write("\n");
-        this.line.write("Functions you can use: ");
-        this.line.write("\n\n");
         for (let possibility of showPossibilities) {
             this.line.write(possibility.toString());
             this.line.write("\n");
