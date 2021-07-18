@@ -1,6 +1,4 @@
-# VaccApp
-
-### Usage
+### VaccApp
 1. install:
    npm install
 
@@ -10,6 +8,9 @@
 3. run unit test:
     npm t
 
-### UML Diagrams
+# Login as Admin:
+username: admin
+password: 1234
 
+### UML Diagrams
 -> in folder uml
