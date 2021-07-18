@@ -3,9 +3,6 @@ import { Impfling } from "./Impfling";
 import ConsoleHandling from "./ConsoleHandling";
 
 export class VaccApp {
-    public static impfling: Impfling;
-    public static admin: Admin;
-
     private static _instance: VaccApp = new VaccApp();
 
     private constructor() {

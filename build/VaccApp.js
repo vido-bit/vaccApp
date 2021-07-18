@@ -5,8 +5,6 @@ const Admin_1 = require("./Admin");
 const Impfling_1 = require("./Impfling");
 const ConsoleHandling_1 = require("./ConsoleHandling");
 class VaccApp {
-    static impfling;
-    static admin;
     static _instance = new VaccApp();
     constructor() {
         if (VaccApp._instance)

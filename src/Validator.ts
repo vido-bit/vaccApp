@@ -33,9 +33,6 @@ export class Validator {
         let regex: RegExp = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
         return regex.test(_eMail);
     }
-    // public timeExists(_inputTime: string,): boolean {
-
-    // }
     public emailAlreadyExists(_eMail: string, appointmentsArray: AppointmentDay[], waitingList: RegisteredImpfling[]): boolean {
         let existingMail: boolean = false;
         for (let waitingImpfling of waitingList) {

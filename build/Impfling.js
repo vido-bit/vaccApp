@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Impfling = void 0;
+const AppointmentFactory_1 = require("./AppointmentFactory");
 const ConsoleHandling_1 = require("./ConsoleHandling");
 const FileHandling_1 = require("./FileHandling");
 const RegisteredImpfling_1 = require("./RegisteredImpfling");
 const Validator_1 = require("./Validator");
 class Impfling {
     static _instance = new Impfling();
-    _date;
     constructor() {
         if (Impfling._instance)
             throw new Error("Use Impfling.getInstance() instead new Impfling()");
@@ -161,10 +161,10 @@ class Impfling {
         let dateAvailable = false;
         let timeAvailable = false;
         let amountOfAvailableAppointments;
-        let registeredImpfling;
         let waitingList = FileHandling_1.default.readArrayFile("/data/waitingList.json");
         let appointmentsArray = FileHandling_1.default.readArrayFile("/data/appointments.json");
         let inputTime;
+        let eMail;
         let inputDate = await ConsoleHandling_1.default.question("Please type in the date to find appointments:");
         while (!Validator_1.default.isValidDate(inputDate)) {
             ConsoleHandling_1.default.printInput("\nThis is not a valid date! Please use format dd.m.yyyy.");
@@ -194,7 +194,6 @@ class Impfling {
             appointmentsArray.forEach(day => {
                 day.parallelAppointmentInterval.forEach(interval => {
                     interval.parallelAppointments.forEach(appointment => {
-                        registeredImpfling = appointment.registeredImpfling;
                         if (appointment.isAvailable == true && day.date == inputDate && inputTime == interval.startTime) {
                             timeAvailable = true;
                         }
@@ -242,7 +241,7 @@ class Impfling {
                     ConsoleHandling_1.default.printInput("\nThis is not a valid input! Please refuse using symbols or numbers.");
                     city = await ConsoleHandling_1.default.question("Please type in the city you live in: ");
                 }
-                let eMail = await ConsoleHandling_1.default.question("Please type in your email Address: ");
+                eMail = await ConsoleHandling_1.default.question("Please type in your email Address: ");
                 while (!Validator_1.default.isValidEmail(eMail) || Validator_1.default.emailAlreadyExists(eMail, appointmentsArray, waitingList)) {
                     ConsoleHandling_1.default.printInput("\nThis is not a valid e-mail! Please try again.");
                     eMail = await ConsoleHandling_1.default.question("Please type in your email Address: ");
@@ -311,7 +310,7 @@ class Impfling {
                                 ConsoleHandling_1.default.printInput("\nThis is not a valid input! Please refuse using symbols or numbers.");
                                 city = await ConsoleHandling_1.default.question("Please type in the city you live in: ");
                             }
-                            let eMail = await ConsoleHandling_1.default.question("Please type in your email Address: ");
+                            eMail = await ConsoleHandling_1.default.question("Please type in your email Address: ");
                             while (!Validator_1.default.isValidEmail(eMail) || Validator_1.default.emailAlreadyExists(eMail, appointmentsArray, waitingList)) {
                                 ConsoleHandling_1.default.printInput("\nThis is not a valid e-mail! Please try again.");
                                 eMail = await ConsoleHandling_1.default.question("Please type in your email Address: ");
@@ -345,6 +344,7 @@ class Impfling {
             }
             FileHandling_1.default.writeFile("/data/appointments.json", appointmentsArray);
             ConsoleHandling_1.default.printInput("Congratulations! You successfully registered for an appointment on " + inputDate + " at " + inputTime);
+            AppointmentFactory_1.AppointmentFactory.getInstance().confirmAppointmentPerEmail(eMail);
             this.showMethods();
         }
         else {

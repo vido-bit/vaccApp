@@ -1,11 +1,11 @@
 import { AppointmentDay } from "./AppointmentDay";
+import { AppointmentFactory } from "./AppointmentFactory";
 import ConsoleHandling from "./ConsoleHandling";
 import FileHandling from "./FileHandling";
 import { RegisteredImpfling } from "./RegisteredImpfling";
 import Validator from "./Validator";
 export class Impfling {
     private static _instance: Impfling = new Impfling();
-    public _date: string;
     private constructor() {
         if (Impfling._instance)
             throw new Error("Use Impfling.getInstance() instead new Impfling()");
@@ -161,10 +161,10 @@ export class Impfling {
         let dateAvailable: boolean = false;
         let timeAvailable: boolean = false;
         let amountOfAvailableAppointments: number;
-        let registeredImpfling: RegisteredImpfling;
         let waitingList: RegisteredImpfling[] = FileHandling.readArrayFile("/data/waitingList.json");
         let appointmentsArray: AppointmentDay[] = FileHandling.readArrayFile("/data/appointments.json");
         let inputTime: string;
+        let eMail: string;
 
         let inputDate: string = await ConsoleHandling.question("Please type in the date to find appointments:");
         while (!Validator.isValidDate(inputDate)) {
@@ -196,7 +196,6 @@ export class Impfling {
             appointmentsArray.forEach(day => {
                 day.parallelAppointmentInterval.forEach(interval => {
                     interval.parallelAppointments.forEach(appointment => {
-                        registeredImpfling = appointment.registeredImpfling;
                         if (appointment.isAvailable == true && day.date == inputDate && inputTime == interval.startTime) {
                             timeAvailable = true;
                         }
@@ -245,7 +244,7 @@ export class Impfling {
                     ConsoleHandling.printInput("\nThis is not a valid input! Please refuse using symbols or numbers.");
                     city = await ConsoleHandling.question("Please type in the city you live in: ");
                 }
-                let eMail: string = await ConsoleHandling.question("Please type in your email Address: ");
+                eMail = await ConsoleHandling.question("Please type in your email Address: ");
                 while (!Validator.isValidEmail(eMail) || Validator.emailAlreadyExists(eMail, appointmentsArray, waitingList)) {
                     ConsoleHandling.printInput("\nThis is not a valid e-mail! Please try again.");
                     eMail = await ConsoleHandling.question("Please type in your email Address: ");
@@ -314,7 +313,7 @@ export class Impfling {
                                 ConsoleHandling.printInput("\nThis is not a valid input! Please refuse using symbols or numbers.");
                                 city = await ConsoleHandling.question("Please type in the city you live in: ");
                             }
-                            let eMail: string = await ConsoleHandling.question("Please type in your email Address: ");
+                            eMail = await ConsoleHandling.question("Please type in your email Address: ");
                             while (!Validator.isValidEmail(eMail) || Validator.emailAlreadyExists(eMail, appointmentsArray, waitingList)) {
                                 ConsoleHandling.printInput("\nThis is not a valid e-mail! Please try again.");
                                 eMail = await ConsoleHandling.question("Please type in your email Address: ");
@@ -348,6 +347,7 @@ export class Impfling {
             }
             FileHandling.writeFile("/data/appointments.json", appointmentsArray);
             ConsoleHandling.printInput("Congratulations! You successfully registered for an appointment on " + inputDate + " at " + inputTime);
+            AppointmentFactory.getInstance().confirmAppointmentPerEmail(eMail);
             this.showMethods();
         }
         else {
