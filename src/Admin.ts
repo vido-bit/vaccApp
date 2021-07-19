@@ -99,7 +99,6 @@ export class Admin {
         let dayOfToday: string = new Date().toJSON().substring(8, 10);
         let monthOfToday: string = new Date().toJSON().substring(5, 7);
         let yearOfToday: number = parseInt(new Date().toJSON());
-        ConsoleHandling.printInput(yearOfToday.toString());
 
         let totalAppointments: number = 0;
         let totalAvailableAppointments: number = 0;
@@ -206,6 +205,7 @@ export class Admin {
             case "2":
                 VaccApp.chooseRole();
                 break;
+            case "3":
                 ConsoleHandling.closeConsole();
         }
     }
