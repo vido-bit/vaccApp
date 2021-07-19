@@ -48,7 +48,7 @@ export class Admin {
                 this.showDayOverview();
                 break;
             case "3":
-                ConsoleHandling.closeConsole();
+                this.showStatistics();
         }
     }
 
