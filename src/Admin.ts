@@ -211,7 +211,6 @@ export class Admin {
             case "2":
                 VaccApp.chooseRole();
                 break;
-            case "3":
                 ConsoleHandling.closeConsole();
         }
     }

@@ -48,7 +48,7 @@ class Admin {
                 this.showDayOverview();
                 break;
             case "3":
-                ConsoleHandling_1.default.closeConsole();
+                this.showStatistics();
         }
     }
     async showDayOverview() {
@@ -205,7 +205,6 @@ class Admin {
             case "2":
                 VaccApp_1.default.chooseRole();
                 break;
-            case "3":
                 ConsoleHandling_1.default.closeConsole();
         }
     }
