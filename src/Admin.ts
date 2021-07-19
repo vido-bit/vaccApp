@@ -97,9 +97,7 @@ export class Admin {
     public async showStatistics(): Promise<void> {
         let appointmentsArray: AppointmentDay[] = await FileHandling.readArrayFile("/data/appointments.json");
         let dayOfToday: string = new Date().toJSON().substring(8, 10);
-        console.log(dayOfToday);
         let monthOfToday: string = new Date().toJSON().substring(5, 7);
-        console.log(monthOfToday);
         let yearOfToday: number = parseInt(new Date().toJSON());
         ConsoleHandling.printInput(yearOfToday.toString());
 
@@ -117,9 +115,6 @@ export class Admin {
             let thisDay: number = parseInt(day.date.substring(0, 3));
             let thisMonth: number = parseInt(day.date.substring(4, 6));
             let thisYear: number = parseInt(day.date.substring(6, 10));
-            console.log(thisDay);
-            console.log(thisMonth);
-            console.log(thisYear);
             day.parallelAppointmentInterval.forEach(interval => {
                 interval.parallelAppointments.forEach(appointment => {
                     totalAppointments++;
