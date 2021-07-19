@@ -8,7 +8,7 @@
 3. run unit test:
     npm t
 
-# Login as Admin:
+### Login as Admin:
 username: admin
 password: 1234
 
